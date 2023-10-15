@@ -1,6 +1,10 @@
 // algoritmo para calcular el presupeusto de una computadora
 
-let precioMonitor, precioTeclado, precioMouse, precioGabinete, precioTotal, descuento;
+
+
+
+let precioMonitor, precioTeclado, precioMouse, precioGabinete, precioTotal;
+
 
 do {
   precioGabinete = Number(prompt("Introduzca el precio de su gabinete"));
@@ -21,11 +25,20 @@ do {
 precioTotal = precioGabinete + precioMonitor + precioMouse + precioTeclado;
 
 if (precioTotal > 150000) {
+  calculoDescuentos();
+}
+
+alert(`El costo total de su computadora es: ${precioTotal}`);
+alert(`Gracias por comprar con 'AWSD Tecnologia' `);
+
+
+
+function calculoDescuentos() {
+
+  let descuento;
+
   alert(`Debido al costo de la compra tendras un 10% de descuento`);
   descuento = precioTotal * 0.1;
   precioTotal = precioTotal - descuento;
   alert(`Tu descuento fue de ${descuento}`);
 }
-
-alert(`El costo total de su computadora es: ${precioTotal}`);
-alert(`Gracias por comprar con 'AWSD Tecnologia' `);
